@@ -12,12 +12,9 @@
 */
 
 Route::get('/', function () {
-    $me = [
-        'Leah',
-        '29',
-    ];
+    $tasks = App\Task::all();
     
-    return view('welcome', compact('me'));
+    return view('welcome', compact('tasks'));
 });
 
 Route::get('/about', function() {

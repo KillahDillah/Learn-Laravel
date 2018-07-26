@@ -70,10 +70,9 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laracasts
-                    
                     <ul>
-                    @foreach ($me as $trait)
-                    <li>{{ $trait }}</li>
+                    @foreach ($tasks as $task)
+                    <li>{{ $task }}</li>
                     @endforeach
                     </ul>
                 </div>
