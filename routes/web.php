@@ -12,10 +12,8 @@
 */
 
 Route::get('/', function () {
-    $tasks = [
-        'Leah',
-        '29',
-    ];
+    $tasks = DB::table('tasks')->get();
+
     return view('welcome', compact('tasks'));
 });
 
