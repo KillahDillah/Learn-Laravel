@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    $tasks = App\Task::all();
-    
+    $tasks = [
+        'Leah',
+        '29',
+    ];
     return view('welcome', compact('tasks'));
 });
 
