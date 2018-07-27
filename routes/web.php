@@ -12,11 +12,13 @@
 */
 
 Route::get('/', function () {
-    $tasks = DB::table('tasks')->get();
-
+    $tasks = DB::table('tasks')->latest()->get(); //query builder
+    // return $tasks;
     return view('welcome', compact('tasks'));
 });
 
-Route::get('/about', function() {
-    return view('about');
+Route::get('/tasks/{task}', function($id) {
+    $task = DB::table('tasks')->find($id);
+    dd($task);
+    return view('welcome', compact('tasks'));
 });
