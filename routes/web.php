@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/tasks', function () {
     $tasks = DB::table('tasks')->latest()->get(); //query builder
     // return $tasks;
     return view('welcome', compact('tasks'));

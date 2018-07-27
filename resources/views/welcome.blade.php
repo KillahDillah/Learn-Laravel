@@ -72,7 +72,10 @@
                     
                     <ul>
                     @foreach ($tasks as $task)
-                    <li>{{ $task->title }}</li>
+                    <li>
+                        <a href="/tasks/{{ $task->id }}">
+                        {{ $task->title}}
+                    </li>
                     @endforeach
                     </ul>
                 </div>
