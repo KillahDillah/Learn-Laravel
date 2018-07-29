@@ -12,7 +12,8 @@ class TasksController extends Controller
     }
     public function show($id) {
         $task = Task::find($id);  //Eloquent
-
+        // $task = DB::table('tasks')->find($id); //query builder
+        Task::incomplete();
         return view('show', compact('task'));
     }
     
