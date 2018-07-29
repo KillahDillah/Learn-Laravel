@@ -19,6 +19,6 @@ Route::get('/tasks', function () {
 
 Route::get('/tasks/{task}', function($id) {
     $task = DB::table('tasks')->find($id);
-
+    Task::incomplete();
     return view('show', compact('task'));
 });
